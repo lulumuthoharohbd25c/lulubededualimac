@@ -1,0 +1,108 @@
+/* 1. Pengaturan umum */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+    margin: 0;
+    font-family: "poppins", Arial, sans-serif;
+    color: #333333;
+    line-height: 1.6;
+    background : linear-gradient(180deg, #fffdf2 0% #f7f7f7 100%);
+}
+
+/* 2. Header dan menu */
+header {
+    background : linear-gradient(180deg, #fffdf2 0%, #f7f7f7 100%);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 32px 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+header h1 { margin: 0; font-size: 40px; letter-spacing: -0.5px; }
+nav { margin-top: 16px; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+nav a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 12px;
+    padding: 6px 14px; border-radius: 20px; background-color: rgba(255, 255, 255, 0.45); transition: all 0.25s ease;
+}
+nav a:hover { text-decoration: none; background-color: #000000; color: #FFD400; transform: translateY(-2px); }
+
+/* 3. Isi halaman */
+main { max-width: 960px; margin:0 auto; padding: 16px; }
+section {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #f0e2a6;
+    border-radius: 12px;
+    padding: 24px;
+    margin: 24px 0;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05); transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+section:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08); }
+h2 {
+    color: #b87b00;
+    border-bottom: 3px solid #FFD400;
+    padding-bottom: 8px;
+    margin-top: 0;
+}
+img { max-width: 100%; height: auto; border-radius: 8px; transition: transform 0.3s ease; }
+img:hover { transform: scale(1.02); }
+
+/* 4. Tabel */
+table { width: 100%; border-collapse: collapse; border-radius: 8px; overflow: hidden; }
+th, td { border: 1px solid #D4901E; padding: 10px; text-align: left; }
+th { background-color: #D4901E; color: #000000; font-weight: 700; }
+tbody tr:nth-child(even) { background-color: #fffaf0; }
+tbody tr:hover { background-color: #fff0c2; }
+
+/* 5. Form */
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #D4901E;
+    border-radius: 6px;
+    font-family: inherit;
+    background-color: #fffdf9; transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+input:focus, select:focus, textarea:focus { outline: none; border-color: #000000; box-shadow: 0 0 0 3px rgba(255, 212, 0, 0.45); background-color: #ffffff; }
+button {
+    background-color: #FFD400;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 6px;
+    padding: 12px 24px;
+    cursor: pointer;
+    font-weight: 700; transition: all 0.2s ease; box-shadow: 0 4px 10px rgba(212, 144, 30, 0.25);
+}
+button:hover { background-color: #e6be00; transform: translateY(-2px); box-shadow: 0 6px 14px rgba(212, 144, 30, 0.35); }
+
+/* 6. Tombol WhatsApp */
+.tombol-wa {
+    display: inline-block;
+    background-color: #25d366;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 30px;
+    animation: popOutWA 1.8s infinite ease-in-out; 
+    box-shadow: 0 6px 18px rgba(37, 211, 102, 0.45); 
+}
+.tombol-wa:hover {
+    background-color: #1ebe5d; 
+    transform: scale(1.08) translateY(-3px); 
+    box-shadow: 0 10px 24px rgba(37, 211, 102, 0.6); 
+}
+@keyframes popOutWA { 
+    0%, 100% { transform: scale(1); } 
+    50% { transform: scale(1.06) translateY(-2px); } 
+} 
+
+/* 7. Footer */
+footer {
+    background-color: #FFD400;
+    color: #000000;
+    text-align: center;
+    padding: 16px;
+    font-weight: 500; margin-top: 32px;
+}
